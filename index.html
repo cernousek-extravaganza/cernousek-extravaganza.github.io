@@ -7,10 +7,11 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #111, #222);
+      background: linear-gradient(135deg, #1a1a1a, #333);
       font-family: 'Arial', sans-serif;
       color: #fff;
       text-align: center;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -18,6 +19,22 @@
       margin-top: 40px;
       color: #ffcc00;
       text-shadow: 2px 2px 5px #000;
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes neon {
+      from {
+        text-shadow:
+          0 0 10px #ffcc00,
+          0 0 20px #ffcc00,
+          0 0 30px #ffcc00;
+      }
+      to {
+        text-shadow:
+          0 0 20px #ffcc00,
+          0 0 30px #ffcc00,
+          0 0 40px #ffcc00;
+      }
     }
 
     .subtitle {
@@ -80,11 +97,24 @@
       font-size: 0.9em;
       color: #888;
     }
+
+    .eben-image {
+      width: 200px;
+      border-radius: 50%;
+      margin-top: 20px;
+      transition: transform 0.3s;
+    }
+
+    .eben-image:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
   </style>
 </head>
 <body>
   <h1>ČERNOUŠEK EXTRAVAGANZA</h1>
   <div class="subtitle">Večer plný hudby, humoru a neonové nádhery!</div>
+
+  <img src="https://foto.osobnosti.cz/marek-eben-259524" alt="Marek Eben" class="eben-image">
 
   <div class="section">
     <p><span class="highlight">Leoš Mareš</span> bude hostem večera – a možná i zpívá!</p>
@@ -101,7 +131,7 @@
   <button class="button" onclick="alert('Rezervace spuštěna!')">ZAREZERVOVAT MÍSTO</button>
 
   <div class="footer">
-    © 2025 Černoušek Events. Všechna práva vyhulena. Eh... vyhrazena.
+    © 2025 Černoušek Events. Všechna práva vyhrazena.
   </div>
 </body>
 </html>
